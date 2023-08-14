@@ -1,0 +1,66 @@
+ {{msg}}
+ <br>
+
+ <input style="color: green; 
+                margin-top: 40px;
+                margin-left: 100px;"
+                [value] = 'message'>
+
+                <img [src]='src'>
+
+<hr>
+<hr>
+<div>
+      <h2>Data Binding Example </h2>
+      First Name : {{fname}}; <br/>
+      Last Name : {{lname}}; <br/>
+      Age : {{age}}; <br/>
+      Gender : {{gender}}; <br/>
+      Country : {{country}}; <br/>
+      Is Employed : {{isEmployed}} <br/>
+      <hr/>
+      First Name : <input type="text" [(ngModel)]="fname"><br/>
+
+      Last Name : <input type = "text" [(ngModel)]="lname"><br/>
+
+      age : <input type = "number" [(ngModel)] = "age"><br/>
+      gender : <input type="radio"  [(ngModel)]="gender" value = "Male"> Male
+                <input type ="radio" [(ngModel)]="gender" value = "Fe-Male"> Fe-Male <br/>
+      country: <select [(ngModel)]="country">
+                  <option >USA</option>
+                  <option selected>China</option>
+                  <option>India</option>
+                  <option>Australia</option>
+      </select><br/>
+
+      is Employed : <input type = "checkbox" [(ngModel)]="isEmployed">
+      <br>
+      
+      <input type="button" value="submit" (click) = "handleSubmitButton()">
+
+</div>
+
+<hr/>
+
+<h4>Registration Form</h4>
+
+Username : <input type="text" [(ngModel)]="username"/><br/>
+Password : <input type="password" [(ngModel)]="password"/><br/>
+Confirm Password : <input type="password" [(ngModel)]="confirmPassword"><br/>
+Gender : 
+        <input type="radio" [(ngModel)]="Gender" value="Male">Male
+        <input type="radio" [(ngModel)]="Gender" value="Fe-Male">Fe-Male <br/>
+
+Country:  
+       <select [(ngModel)]="Country">
+          <option>-Select-</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+       </select> <br/>
+
+<input type="checkbox" [(ngModel)]="licenseAgreement"/> I Accept License Agreement <br/>
+<input type="submit" value="Register" (click)="RegisterClick()"/>
+<hr/>
+<div [innerHTML]="validMessage"></div>
+
